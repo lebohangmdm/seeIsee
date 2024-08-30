@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NavLinks = () => {
   return (
-    <div className="hidden lg:flex items-center gap-x-12 xl:gap-x-14">
+    <div className="hidden lg:flex items-center lg:gap-x-10 xl:gap-x-14">
       {links.map((link) => {
         return (
           <Link

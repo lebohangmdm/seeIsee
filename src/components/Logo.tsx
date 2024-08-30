@@ -8,7 +8,7 @@ const Logo = () => {
       <Image
         src={img}
         alt="logo"
-        className="h-8 w-8 mx-auto object-cover rounded-full  cursor-pointer"
+        className="h-7 w-7 mx-auto object-cover rounded-full  cursor-pointer"
       />
       <span className="text-xs sm:text-sm lg:text-base italic absolute top-5 ">
         seeI<span className="text-red-500">see</span>

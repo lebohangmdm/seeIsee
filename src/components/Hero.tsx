@@ -26,11 +26,11 @@ const Hero = () => {
             <span className="font-bold">
               seeI<span className="text-destructive">see</span>
             </span>
-            , we provide top-tier security solutions tailored to meet your
-            needs. Our highly trained and professional security guards are
-            committed to ensuring your safety and peace of mind, whether at
-            home, work, or during special events. Trust us to protect what
-            matters most
+            , your safety is our mission. We’re more than just security
+            guards—we’re your neighbors, dedicated to creating a safer
+            environment for our community. With 24/7 protection and a deep
+            understanding of local needs, we stand as the first line of defense
+            for your home, business, and events.
           </p>
 
           <Button
