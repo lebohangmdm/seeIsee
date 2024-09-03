@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
-import img1 from "@/public/service-1.jpg";
-import img2 from "@/public/crowd.jpeg";
+//  import img2 from "@/public/crowd.jpeg";
+import img1 from "@/public/licensed.jpg";
+import img2 from "@/public/crowd-security.jpg";
+import img3 from "@/public/patrol-security.jpg";
+import img4 from "@/public/staff-escort.jpg";
+import img5 from "@/public/access-control.jpg";
+import img6 from "@/public/guards.jpg";
+import crowd from "@/public/people.png";
 import guard from "@/public/guard.png";
-import { MoveRight, ShieldCheck } from "lucide-react";
+import patrol from "@/public/patrol.png";
+
+import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,28 +42,29 @@ const Services = () => {
               </Link>
             </Button>
           </div>
-          <div>
+          <div className="relative h-full w-full">
             <Image
               src={img1}
               alt="a guard"
               objectFit="cover"
               className="h-full w-full object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#E15252]/20"></div>
           </div>
           {/* group-2 */}
           <div className="p-3  md:p-4  shadow-inner">
             <Image
-              src={guard}
+              src={crowd}
               alt="icon guard"
               objectFit="cover"
               className="w-14 h-14 object-cover mb-4"
             />
             <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
-              Licensed Security Officers
+              Crowd Management
             </p>
             <p className="text-sm mb-4">
-              Our licensed security officers, expertly trained to deliver
-              reliable, professional protection for your safety.
+              Efficient crowd management services at community, ensuring safety
+              and smooth operations during events and gatherings.
             </p>
             <Button variant="link" asChild>
               <Link
@@ -66,45 +75,47 @@ const Services = () => {
               </Link>
             </Button>
           </div>
-          <div>
-            <Image
-              src={img1}
-              alt="a guard in crowd"
-              objectFit="cover"
-              className="h-full w-full object-cover object-top "
-            />
-          </div>
-          {/* group-3 */}
-          <div className="p-3  md:p-4  shadow-inner">
-            <Image
-              src={guard}
-              alt="icon guard"
-              objectFit="cover"
-              className="w-14 h-14 object-cover mb-4"
-            />
-            <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
-              Licensed Security Officers
-            </p>
-            <p className="text-sm mb-4">
-              Our licensed security officers, expertly trained to deliver
-              reliable, professional protection for your safety.
-            </p>
-            <Button variant="link" asChild>
-              <Link
-                href={"/services/offices"}
-                className="flex items-center gap-1 text-lg font-bold"
-              >
-                Explore More <MoveRight className="w-6 h-6" />
-              </Link>
-            </Button>
-          </div>
-          <div>
+          <div className="relative h-full w-full">
             <Image
               src={img2}
               alt="a guard in crowd"
               objectFit="cover"
+              className="h-full w-full object-cover object-top "
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#E15252]/40"></div>
+          </div>
+          {/* group-3 */}
+          <div className="p-3  md:p-4  shadow-inner">
+            <Image
+              src={patrol}
+              alt="icon guard"
+              objectFit="cover"
+              className="w-14 h-14 object-cover mb-4"
+            />
+            <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
+              Patrolling
+            </p>
+            <p className="text-sm mb-4">
+              Reliable patrolling at the community to maintain security and
+              deter potential threats around the clock.
+            </p>
+            <Button variant="link" asChild>
+              <Link
+                href={"/services/offices"}
+                className="flex items-center gap-1 text-lg font-bold"
+              >
+                Explore More <MoveRight className="w-6 h-6" />
+              </Link>
+            </Button>
+          </div>
+          <div className="relative h-full w-full">
+            <Image
+              src={img3}
+              alt="a guard in crowd"
+              objectFit="cover"
               className="h-full w-full object-cover object-top"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#E15252]/40"></div>
           </div>
           {/* group-4 */}
           <div className="p-3  md:p-4  shadow-inner">
@@ -115,11 +126,11 @@ const Services = () => {
               className="w-14 h-14 object-cover mb-4"
             />
             <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
-              Licensed Security Officers
+              Escorting Security Officers
             </p>
             <p className="text-sm mb-4">
-              Our licensed security officers, expertly trained to deliver
-              reliable, professional protection for your safety.
+              We offer professional escorting to ensure safe and secure travel
+              and protection for individuals and groups.
             </p>
             <Button variant="link" asChild>
               <Link
@@ -130,14 +141,16 @@ const Services = () => {
               </Link>
             </Button>
           </div>
-          <div>
+          <div className="relative h-full w-full">
             <Image
-              src={img2}
+              src={img4}
               alt="a guard in crowd"
               objectFit="cover"
               className="h-full w-full object-cover object-top"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#E15252]/50"></div>
           </div>
+
           {/* group-5 */}
           <div className="p-3  md:p-4  shadow-inner">
             <Image
@@ -147,11 +160,11 @@ const Services = () => {
               className="w-14 h-14 object-cover mb-4"
             />
             <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
-              Licensed Security Officers
+              Access control security
             </p>
             <p className="text-sm mb-4">
-              Our licensed security officers, expertly trained to deliver
-              reliable, professional protection for your safety.
+              We offer reliable access control, limiting entry to authorized
+              individuals for secure and controlled environments
             </p>
             <Button variant="link" asChild>
               <Link
@@ -162,13 +175,14 @@ const Services = () => {
               </Link>
             </Button>
           </div>
-          <div>
+          <div className="relative h-full w-full">
             <Image
-              src={img2}
+              src={img5}
               alt="a guard in crowd"
               objectFit="cover"
               className="h-full w-full object-cover object-top"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#E15252]/30"></div>
           </div>
           {/* group-6 */}
           <div className="p-3  md:p-4  shadow-inner">
@@ -179,11 +193,11 @@ const Services = () => {
               className="w-14 h-14 object-cover mb-4"
             />
             <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
-              Licensed Security Officers
+              Concierge
             </p>
             <p className="text-sm mb-4">
-              Our licensed security officers, expertly trained to deliver
-              reliable, professional protection for your safety.
+              We offer personalized assistance with vigilant protection,
+              ensuring safety and convenience in secure environment
             </p>
             <Button variant="link" asChild>
               <Link
@@ -194,13 +208,14 @@ const Services = () => {
               </Link>
             </Button>
           </div>
-          <div>
+          <div className="relative h-full w-full">
             <Image
-              src={img2}
+              src={img6}
               alt="a guard in crowd"
               objectFit="cover"
               className="h-full w-full object-cover object-top"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#E15252]/30"></div>
           </div>
         </div>
       </div>
