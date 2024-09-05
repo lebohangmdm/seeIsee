@@ -44,6 +44,7 @@ const MenuDropdown = () => {
               <Link href={link.url}>{link.name}</Link>
             </DropdownMenuItem>
           ))}
+
           {isAuth && (
             <DropdownMenuItem
               key={"login"}
@@ -51,9 +52,9 @@ const MenuDropdown = () => {
               asChild
             >
               <Button
-                variant={"destructive"}
+                variant={"ghost"}
                 asChild
-                className="rounded-full transition-all duration-200 hover:bg-red-700 cursor-pointer"
+                className="transition-all duration-200  cursor-pointer"
               >
                 <Link href={"/login"} className="flex items-center gap-1">
                   <User className="w-6 h-6" />
@@ -62,6 +63,22 @@ const MenuDropdown = () => {
               </Button>
             </DropdownMenuItem>
           )}
+          <DropdownMenuItem
+            key={"contact"}
+            className="text-lg py-2 mt-5 "
+            asChild
+          >
+            <Button
+              variant={"destructive"}
+              asChild
+              className="transition-all duration-200 hover:bg-red-700 cursor-pointer"
+            >
+              <Link href={"/login"} className="flex items-center gap-1">
+                <User className="w-6 h-6" />
+                Get in Touch
+              </Link>
+            </Button>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
