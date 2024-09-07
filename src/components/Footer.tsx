@@ -1,22 +1,130 @@
+import Image from "next/image";
+import logo from "@/public/logo.png";
+import { Instagram, FacebookIcon, Twitter } from "lucide-react";
+import Link from "next/link";
+
 const Footer = () => {
   return (
-    <footer className="py-16 lg:py-20">
+    <footer className="pt-8 pb-16 lg:pt-16 lg:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid mx-auto grid-cols-6 items-center md:grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-8">
-          <div className="border border-red-500 col-span-3 order-4  md:order-1 md:col-auto">
-            item-1
+        <div className="grid mx-auto grid-cols-6  lg:grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-12">
+          <div className="flex flex-col justify-between  col-span-3 order-4  lg:order-1 lg:col-auto">
+            <div className="relative flex items-center justify-center ">
+              <Image
+                src={logo}
+                alt="logo"
+                width={120}
+                height={120}
+                className="mx-auto object-cover rounded-full  cursor-pointer relative"
+              />
+              <span className="text-xs sm:text-sm lg:text-base italic absolute top-8 ">
+                seeI<span className="text-red-500">see</span>
+              </span>
+            </div>
+            <ul className="flex items-center justify-center gap-4 lg:gap-8">
+              <Link href={""}>
+                {" "}
+                <Instagram className="w-6 h-6" />
+              </Link>
+              <Link href={""}>
+                <FacebookIcon className="w-6 h-6 shaded-icon" />
+              </Link>
+              <Link href={""}>
+                <Twitter className="w-6 h-6" />
+              </Link>
+            </ul>
+
+            <div>
+              <p className="text-xs text-center md:text-sm lg:mt-20 lg:mb-4">
+                Copyright &copy; {new Date().getFullYear()} by seeIsee, Inc.
+                <br />
+                All rights reserved.
+              </p>
+            </div>
           </div>
-          <div className="border border-red-500 col-span-3 order-5 md:order-2 md:col-auto">
-            item-2
+          <div className="space-y-4  md:space-y-6 col-span-3 order-5 lg:order-2 lg:col-auto">
+            <p className="font-base font-semibold md:text-lg">Contact Us</p>
+            <div className="flex flex-col gap-4 lg:gap-7">
+              <p className="text-sm font-medium md:text-base">
+                1 River St, Houghton Estate, Johannesburg, South Africa
+              </p>
+              <div>
+                <p className="text-sm font-medium md:text-base">
+                  +27 861 267 822
+                </p>
+                <p className="text-sm font-medium md:text-base">
+                  info@seeisee.com
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="border border-blue-400 col-span-2 md:col-auto md:order-3">
-            item-3
+          <div className=" space-y-4  md:space-y-6 col-span-2 lg:col-auto lg:order-3">
+            <p className="font-base font-semibold md:text-lg">Quick Links</p>
+
+            <ul className="flex flex-col gap-2 lg:gap-4 text-sm lg:text-base ">
+              <li>
+                <Link href={""}>Home</Link>
+              </li>
+              <li>
+                <Link href={""}>About Us</Link>
+              </li>
+              <li>
+                <Link href={""}>Services</Link>
+              </li>
+              <li>
+                <Link href={""}>Why Choose Us</Link>
+              </li>
+              <li>
+                <Link
+                  href={""}
+                  className="text-sm  md:text-base cursor-pointer"
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="border border-blue-400 col-span-2 md:col-auto md:order-4">
-            item-4
+          <div className=" space-y-4  md:space-y-6 col-span-2 lg:col-auto lg:order-4">
+            <p className="font-base font-semibold md:text-lg">Services</p>
+
+            <ul className="flex flex-col gap-2 lg:gap-4 text-sm lg:text-base ">
+              <li>
+                <Link href={""}>Licensed Officers</Link>
+              </li>
+              <li>
+                <Link href={""}>Crowd Management</Link>
+              </li>
+              <li>
+                <Link href={""}>Concierge</Link>
+              </li>
+              <li>
+                <Link href={""}>Escorting Officers</Link>
+              </li>
+              <li>
+                <Link href={""}>Access control</Link>
+              </li>
+              <li>
+                <Link href={""}>Patrolling</Link>
+              </li>
+            </ul>
           </div>
-          <div className="border border-blue-400 col-span-2 md:col-auto md:order-5">
-            item-5
+          <div className=" space-y-4  md:space-y-6 col-span-2 lg:col-auto lg:order-5">
+            <p className="font-base font-semibold md:text-lg">Quick Links</p>
+
+            <ul className="flex flex-col gap-4 lg:gap-4 text-sm lg:text-base">
+              <li>
+                <Link href={""}>Home</Link>
+              </li>
+              <li>
+                <Link href={""}>About Us</Link>
+              </li>
+              <li>
+                <Link href={""}>Why Choose Us</Link>
+              </li>
+              <li>
+                <Link href={""}>Contact Us</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
