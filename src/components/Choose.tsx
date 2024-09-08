@@ -1,10 +1,9 @@
-import Image from "next/image";
 import img from "@/public/choose.png";
-import { Check, CheckCircle, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 const Choose = () => {
   return (
-    <section className="pt-16">
+    <section className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid gap-y-12 md:grid-cols-2 md:gap-y-0 md:gap-x-8  lg:gap-x-20">
           <div className="">

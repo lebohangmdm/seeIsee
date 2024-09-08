@@ -1,7 +1,7 @@
 // import hero from "@/public/hero3.png";
 import hero from "@/public/hero22.jpg";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
         objectFit="cover"
         className="z-0"
       />
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pt-16 text-white ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-white ">
         <div className="w-3/4 md:w-1/2 absolute z-30">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight   mb-5 md:mb-8 lg:mb-10 lg:max-w-[600px]">
             Your <span className="text-destructive">Safety</span>, Our{" "}

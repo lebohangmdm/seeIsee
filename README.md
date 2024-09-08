@@ -34,3 +34,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Why Choose Us?
+At Ekasi Security, we understand the unique challenges and needs of our community. Our team of dedicated security guards is from the area, so they know the ins and outs of the neighborhood. With a deep commitment to protecting our own, we offer reliable, effective, and culturally aware security services. Whether it's for your home, business, or community event, trust Ekasi Security to keep you and your loved ones safe. We're here for you, by people who understand you.
+
+HERO
+At Ekasi Security, your safety is our mission. We’re more than just security guards—we’re your neighbors, dedicated to creating a safer environment for our community. With 24/7 protection and a deep understanding of local needs, we stand as the first line of defense for your home, business, and events. Secure your peace of mind with the trusted experts who know and care about Ekasi as much as you do.

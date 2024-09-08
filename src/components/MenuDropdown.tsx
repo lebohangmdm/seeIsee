@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "@/app/utils/link";
+import { links } from "@/utils/links";
 import {
   DropdownMenu,
   DropdownMenuContent,

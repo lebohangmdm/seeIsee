@@ -1,4 +1,4 @@
-import { links } from "@/app/utils/link";
+import { links } from "@/utils/links";
 import Link from "next/link";
 
 const NavLinks = () => {
