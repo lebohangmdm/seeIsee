@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 //  import img2 from "@/public/crowd.jpeg";
-import img1 from "@/public/licensed.jpg";
+import img1 from "@/public/screen.jpg";
 import img2 from "@/public/crowd-security.jpg";
 import img3 from "@/public/patrol-security.jpg";
 import img4 from "@/public/staff-escort.jpg";
@@ -13,6 +13,7 @@ import guard from "@/public/guard.png";
 import patrol from "@/public/patrol.png";
 import concierge from "@/public/conciege.png";
 import access from "@/public/access-conrol.png";
+import escort from "@/public/escorting.png";
 
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
@@ -31,11 +32,11 @@ const Services = () => {
               className="w-14 h-14 object-cover mb-4"
             />
             <p className="text-base  leading-tight font-bold mb-2 md:mb-3">
-              Licensed Security Officers
+              Screening Security Officers
             </p>
             <p className="text-sm mb-4">
-              Our licensed security officers, expertly trained to deliver
-              reliable, professional protection for your safety.
+              We insure high safety and reliability through comprehensive
+              personnel vetting.
             </p>
             <Button variant="link" asChild>
               <Link
@@ -92,7 +93,7 @@ const Services = () => {
           {/* group-4 */}
           <div className="p-3  md:p-4  shadow-inner">
             <Image
-              src={guard}
+              src={escort}
               alt="icon guard"
               objectFit="cover"
               className="w-14 h-14 object-cover mb-4"

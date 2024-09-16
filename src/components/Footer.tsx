@@ -7,21 +7,19 @@ const Footer = () => {
   return (
     <footer className="pt-8 pb-16 lg:pt-16 lg:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid mx-auto grid-cols-6  lg:grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-12">
-          <div className="flex flex-col justify-between  col-span-3 order-4  lg:order-1 lg:col-auto">
+        <div className="grid items-start mx-auto grid-cols-6  lg:grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-12">
+          <div className="flex flex-col justify-between gap-8  col-span-3 order-4  lg:order-1 lg:col-auto">
             <div className="relative flex items-center justify-center ">
               <Image
                 src={logo}
                 alt="logo"
-                width={120}
-                height={120}
-                className="mx-auto object-cover rounded-full  cursor-pointer relative"
+                className="mx-auto w-12 h-12 object-cover  rounded-full  cursor-pointer relative backdrop-blur-none"
               />
-              <span className="text-xs sm:text-sm lg:text-base italic absolute top-8 ">
+              <span className="text-xs sm:text-sm lg:text-base italic absolute -bottom-6 md:-bottom-8">
                 seeI<span className="text-red-500">see</span>
               </span>
             </div>
-            <ul className="flex items-center justify-center gap-4 lg:gap-8">
+            <ul className="flex items-center justify-center gap-4 mt-4 md:mt-8 lg:gap-8">
               <Link href={""}>
                 {" "}
                 <Instagram className="w-6 h-6" />
@@ -43,9 +41,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="space-y-4  md:space-y-6 col-span-3 order-5 lg:order-2 lg:col-auto">
-            <p className="font-base font-semibold md:text-lg">Contact Us</p>
+            <p className="text-sm font-semibold md:text-base lg:text-lg">
+              Contact Us
+            </p>
             <div className="flex flex-col gap-4 lg:gap-7">
-              <p className="text-sm font-medium md:text-base">
+              <p className="text-xs font-medium sm:text-base md:text-base">
                 1 River St, Houghton Estate, Johannesburg, South Africa
               </p>
               <div>
@@ -59,9 +59,11 @@ const Footer = () => {
             </div>
           </div>
           <div className=" space-y-4  md:space-y-6 col-span-2 lg:col-auto lg:order-3">
-            <p className="font-base font-semibold md:text-lg">Quick Links</p>
+            <p className="text-sm font-semibold md:text-base lg:text-lg">
+              Quick Links
+            </p>
 
-            <ul className="flex flex-col gap-2 lg:gap-4 text-sm lg:text-base ">
+            <ul className="flex flex-col gap-2 lg:gap-4 text-xs sm:text-sm lg:text-base ">
               <li>
                 <Link href={""}>Home</Link>
               </li>
@@ -85,11 +87,13 @@ const Footer = () => {
             </ul>
           </div>
           <div className=" space-y-4  md:space-y-6 col-span-2 lg:col-auto lg:order-4">
-            <p className="font-base font-semibold md:text-lg">Services</p>
+            <p className="text-sm font-semibold md:text-base lg:text-lg">
+              Services
+            </p>
 
-            <ul className="flex flex-col gap-2 lg:gap-4 text-sm lg:text-base ">
+            <ul className="flex flex-col gap-2 lg:gap-4 text-xs sm:text-sm lg:text-base ">
               <li>
-                <Link href={""}>Licensed Officers</Link>
+                <Link href={""}>Screening</Link>
               </li>
               <li>
                 <Link href={""}>Crowd Management</Link>
@@ -109,9 +113,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className=" space-y-4  md:space-y-6 col-span-2 lg:col-auto lg:order-5">
-            <p className="font-base font-semibold md:text-lg">Quick Links</p>
+            <p className="text-sm font-semibold md:text-base lg:text-lg">
+              Quick Links
+            </p>
 
-            <ul className="flex flex-col gap-4 lg:gap-4 text-sm lg:text-base">
+            <ul className="flex flex-col gap-4  lg:gap-4 text-xs sm:text-sm lg:text-base">
               <li>
                 <Link href={""}>Home</Link>
               </li>
