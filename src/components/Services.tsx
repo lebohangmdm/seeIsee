@@ -40,7 +40,7 @@ const Services = () => {
             </p>
             <Button variant="link" asChild>
               <Link
-                href={"/services/offices"}
+                href={"/screening-service"}
                 className="flex items-center gap-1 text-lg font-bold"
               >
                 Explore More <MoveRight className="w-6 h-6" />
@@ -73,7 +73,7 @@ const Services = () => {
             </p>
             <Button variant="link" asChild>
               <Link
-                href={"/services/offices"}
+                href={"/crowd-management"}
                 className="flex items-center gap-1 text-lg font-bold"
               >
                 Explore More <MoveRight className="w-6 h-6" />
@@ -107,7 +107,7 @@ const Services = () => {
             </p>
             <Button variant="link" asChild>
               <Link
-                href={"/services/offices"}
+                href={"/escorting-security-officers"}
                 className="flex items-center gap-1 text-lg font-bold"
               >
                 Explore More <MoveRight className="w-6 h-6" />
@@ -142,7 +142,7 @@ const Services = () => {
             </p>
             <Button variant="link" asChild>
               <Link
-                href={"/services/offices"}
+                href={"/access-control-security"}
                 className="flex items-center gap-1 text-lg font-bold"
               >
                 Explore More <MoveRight className="w-6 h-6" />
@@ -175,7 +175,7 @@ const Services = () => {
             </p>
             <Button variant="link" asChild>
               <Link
-                href={"/services/offices"}
+                href={"/concierge"}
                 className="flex items-center gap-1 text-lg font-bold"
               >
                 Explore More <MoveRight className="w-6 h-6" />
@@ -208,7 +208,7 @@ const Services = () => {
             </p>
             <Button variant="link" asChild>
               <Link
-                href={"/services/offices"}
+                href={"/patrolling"}
                 className="flex items-center gap-1 text-lg font-bold"
               >
                 Explore More <MoveRight className="w-6 h-6" />

@@ -1,5 +1,5 @@
 // import hero from "@/public/hero3.png";
-import hero from "@/public/hero22.jpg";
+import hero from "@/public/hero.jpg";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 

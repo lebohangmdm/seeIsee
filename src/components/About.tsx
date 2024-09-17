@@ -1,4 +1,4 @@
-import img from "@/public/about-3.png";
+import img from "@/public/about.png";
 import Image from "next/image";
 
 const About = () => {
