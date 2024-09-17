@@ -1,13 +1,24 @@
-import { KeyPoint } from "@/utils/services";
-import { Document, Schema, model } from "mongoose";
+import mongoose, { Document, Schema, model, models } from "mongoose";
+import slugify from "slugify";
+
+interface KeyPoint {
+  title: string;
+  point: string;
+}
 
 interface IService extends Document {
   title: string;
+  slug: string;
   image: string;
   summary: string;
   description: string;
-  keyPoint: KeyPoint[];
+  keyPoint: KeyPoint[]; // Array of KeyPoint objects
 }
+
+const keyPointSchema: Schema = new Schema({
+  title: { type: String, required: true },
+  point: { type: String, required: true },
+});
 
 const serviceSchema: Schema = new Schema(
   {
@@ -17,6 +28,10 @@ const serviceSchema: Schema = new Schema(
       unique: true,
       trim: true,
     },
+    slug: {
+      type: String,
+      unique: true, // Ensure slugs are unique
+    },
     image: {
       type: String,
       required: [true, "Please provide an image"],
@@ -24,16 +39,14 @@ const serviceSchema: Schema = new Schema(
     summary: {
       type: String,
       required: [true, "Please provide your summary"],
-      maxLength: 30,
     },
     description: {
       type: String,
       required: [true, "Please provide your description"],
-      maxLength: 30,
     },
     keyPoint: {
-      type: Array,
-      required: [true, "Please provide key points"],
+      type: [keyPointSchema],
+      required: "Please provide the key points",
     },
   },
   {
@@ -41,4 +54,14 @@ const serviceSchema: Schema = new Schema(
   }
 );
 
-export default model<IService>("Service", serviceSchema);
+serviceSchema.pre<IService>("save", function (next) {
+  if (this.isModified("title") || this.isNew) {
+    this.slug = slugify(this.title, { lower: true, strict: true });
+  }
+  next();
+});
+
+// Check if model already exists, otherwise create it
+const Service = models.Service || model<IService>("Service", serviceSchema);
+
+export default Service;
