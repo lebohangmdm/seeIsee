@@ -4,7 +4,6 @@ import { KeyPoint, Service } from "@/utils/services";
 import Contact from "@/components/Contact";
 
 const page = async ({ params: { slug } }: { params: { slug: string } }) => {
-  // console.log(slug);
   const response = await fetch(`http://localhost:3000/api/${slug}`);
   const { service } = (await response.json()) as { service: Service };
 
