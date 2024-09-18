@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { User } from "lucide-react";
 import Link from "next/link";
+import Modal from "@/components/Modal";
 
 const NavBtns = () => {
   return (
@@ -17,18 +18,7 @@ const NavBtns = () => {
           Get In Touch
         </Link>
       </Button>
-      <Button
-        variant="outline"
-        className="py-2 px-4 border-background hover:border hover:border-slate-400 transition-all duration-200 cursor-pointer"
-        asChild
-      >
-        <Link
-          href={"/login"}
-          className="flex items-center gap-1 text-lg font-semibold"
-        >
-          <User className="h-6 w-6" /> Login
-        </Link>
-      </Button>
+      <Modal />
     </div>
   );
 };
