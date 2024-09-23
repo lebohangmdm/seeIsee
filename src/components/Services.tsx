@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 //  import img2 from "@/public/crowd.jpeg";
-import img1 from "@/public/screen.jpg";
-import img2 from "@/public/crowd-security.jpg";
-import img3 from "@/public/patrol-security.jpg";
-import img4 from "@/public/staff-escort.jpg";
 import img5 from "@/public/access-control.jpg";
+import img2 from "@/public/crowd-security.jpg";
 import img6 from "@/public/guards.jpg";
+import img3 from "@/public/patrol-security.jpg";
+import img1 from "@/public/screen.jpg";
+import img4 from "@/public/staff-escort.jpg";
 
 // logo
-import crowd from "@/public/people.png";
+import access from "@/public/access-conrol.png";
+import concierge from "@/public/conciege.png";
+import escort from "@/public/escorting.png";
 import guard from "@/public/guard.png";
 import patrol from "@/public/patrol.png";
-import concierge from "@/public/conciege.png";
-import access from "@/public/access-conrol.png";
-import escort from "@/public/escorting.png";
+import crowd from "@/public/people.png";
 
 import { MoveRight } from "lucide-react";
 import Image from "next/image";

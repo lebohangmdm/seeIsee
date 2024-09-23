@@ -33,14 +33,20 @@ export const POST = async (request: NextRequest) => {
 
     if (!user) {
       return NextResponse.json(
-        { error: "Invalid credentials" },
+        {
+          error: "Invalid credentials",
+          message: "Please provide both valid email and password",
+        },
         { status: 401 }
       );
     }
 
     if (!(await user.comparePassword(password))) {
       return NextResponse.json(
-        { error: "Invalid credentials" },
+        {
+          error: "Invalid credentials",
+          message: "Please provide both valid email and password",
+        },
         { status: 401 }
       );
     }

@@ -21,6 +21,7 @@ import logo from "@/public/logo.png";
 import { LoginData } from "@/utils/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -33,6 +34,22 @@ const formSchema = z.object({
 
 const page = () => {
   // const router = useRouter();
+
+  const { toast } = useToast();
+
+  //   return (
+  //     <Button
+  //       onClick={() => {
+  //         toast({
+  //           title: "Scheduled: Catch up",
+  //           description: "Friday, February 10, 2023 at 5:57 PM",
+  //         })
+  //       }}
+  //     >
+  //       Show Toast
+  //     </Button>
+  //   )
+  // }
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -50,11 +67,16 @@ const page = () => {
       if (axios.isAxiosError(error)) {
         // Handle Axios error
         console.error("Axios error: ", error);
-        throw new Error(error.message);
+        toast({
+          title: error.response?.data.error,
+          description: error.response?.data.message,
+        });
       } else {
         // Handle other errors
         console.error("Unknown error: ", error);
-        throw new Error("An unknown error occurred");
+        toast({
+          title: "Something went Wrong. Please try later",
+        });
       }
     }
   };

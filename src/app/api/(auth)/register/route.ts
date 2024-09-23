@@ -40,7 +40,7 @@ export const POST = async (request: NextRequest) => {
   } catch (error) {
     console.log(error);
     return NextResponse.json(
-      { message: "Failed to register a user" },
+      { error: "Something went wrong", message: "Failed to register a user" },
       { status: 500 }
     );
   }

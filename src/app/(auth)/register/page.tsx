@@ -15,11 +15,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import Image from "next/image";
 import logo from "@/public/logo.png";
-import Logo from "@/components/Logo";
 import { RegisterData } from "@/utils/types";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import axios from "axios";
+import { toast } from "@/hooks/use-toast";
 
 // Schema definition
 
@@ -57,19 +58,25 @@ const Page = () => {
   });
 
   const onSubmit = async (data: RegisterData) => {
-    const response = await fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
+    try {
+      const response = await axios.post("/api/register", data);
+      return response.data;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        // Handle Axios error
+        console.error("Axios error: ", error);
+        toast({
+          title: error.response?.data.error,
+          description: error.response?.data.message,
+        });
+      } else {
+        // Handle other errors
+        console.error("Unknown error: ", error);
+        toast({
+          title: "Something went Wrong. Please try later",
+        });
+      }
     }
-
-    return router.push("/login");
   };
 
   return (
