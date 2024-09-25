@@ -1,19 +1,30 @@
-import jwt from "jsonwebtoken";
+import { SignJWT, jwtVerify } from "jose";
 
-export const generateToken = async (id: string): Promise<string> => {
-  if (!process.env.JWT_SECRET) {
+const secret = new TextEncoder().encode(process.env.NEXT_PUBLIC_JWT_SECRET);
+export async function generateToken(id: string): Promise<string> {
+  if (!process.env.NEXT_PUBLIC_JWT_EXPIRES_IN) {
     throw new Error(
       "JWT_SECRET and JWT_EXPIRES_IN must be defined in environment variables."
     );
   }
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRES_IN,
-  });
-};
+  try {
+    const token = await new SignJWT({ id })
+      .setProtectedHeader({ alg: "HS256" })
+      .setIssuedAt()
+      .setExpirationTime(process.env.NEXT_PUBLIC_JWT_EXPIRES_IN)
+      .sign(secret);
 
-export const verifyToken = async (token: string) => {
-  if (!process.env.JWT_SECRET) {
-    throw new Error("JWT_SECRET must be defined in environment variables.");
+    return token;
+  } catch (error) {
+    throw new Error("Error signing JWT: " + error);
   }
-  return jwt.verify(token, process.env.JWT_SECRET);
-};
+}
+
+export async function verifyToken(token: string) {
+  try {
+    const { payload } = await jwtVerify(token, secret);
+    return payload; // Return the decoded payload if verification succeeds
+  } catch (error) {
+    throw new Error("Invalid or expired token: " + error);
+  }
+}
