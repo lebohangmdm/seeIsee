@@ -1,5 +1,6 @@
 import mongoose, { Document, Schema, model, models } from "mongoose";
 import validator from "validator";
+import bcrypt from "bcryptjs";
 
 interface IUser extends Document {
   fullName: string;
@@ -62,6 +63,21 @@ const userSchema: Schema = new Schema({
   },
 });
 
+userSchema.pre<IUser>("save", async function (next) {
+  if (!this.isModified("password") || !this.isNew) return next();
+  const salt = await bcrypt.genSalt(12);
+  this.password = await bcrypt.hash(this.password, salt);
+
+  this.passwordConfirm = undefined;
+  next();
+});
+
+// compare password
+userSchema.methods.comparePassword = async function (
+  candidatePassword: string
+): Promise<boolean> {
+  return bcrypt.compare(candidatePassword, this.password);
+};
 // Check if model already exists, otherwise create it
 const User = models.User || model<IUser>("User", userSchema);
 

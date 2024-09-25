@@ -60,7 +60,9 @@ const Page = () => {
   const onSubmit = async (data: RegisterData) => {
     try {
       const response = await axios.post("/api/register", data);
-      return response.data;
+      console.log(response.data);
+
+      return router.push("/login");
     } catch (error) {
       if (axios.isAxiosError(error)) {
         // Handle Axios error

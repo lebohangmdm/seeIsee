@@ -45,9 +45,16 @@ export default function Modal() {
           {/* <DialogDescription>Enter your email</DialogDescription> */}
         </DialogHeader>
         <div className="grid gap-4 pt-4">
-          <div>
-            <Input id="email" type="email" placeholder="Email address" />
-          </div>
+          <form action="">
+            <div>
+              <Input
+                id="email"
+                type="email"
+                placeholder="Email address"
+                name="email"
+              />
+            </div>
+          </form>
         </div>
         <DialogFooter>
           <Button
